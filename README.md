@@ -1,77 +1,70 @@
-#  E-Learning Management System (ELMS) — Client
+# Getting Started with Create React App
 
-The **E-Learning Management System (ELMS)** is a web-based platform that allows users to explore, learn, and manage courses through interactive documentation.  
-This repository contains the **frontend client**, built using **React** (with Vite) for a fast and responsive user experience.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
----
+## Available Scripts
 
-##  Overview
-The ELMS client enables users to **learn through free documentation** and provides **role-based access control**.  
-Users can browse and enroll in courses, while admins manage all course-related operations.
+In the project directory, you can run:
 
----
+### `npm start`
 
-##  User Roles & Functional Use Cases
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### 1. User Authentication
-- New users can **register** or **log in** securely.
-- Upon login, the system identifies the user’s role:
-  - **User**
-  - **Admin**
-- All passwords are securely hashed and stored in the backend.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
----
+### `npm test`
 
-###  2. User Role: User
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-#### • View All Courses
-- Browse all available courses on the platform.
-- Each course card shows:
-  - Title  
-  - Description  
-  - Options to **view free documentation** or **add to My Courses**.
+### `npm run build`
 
-#### • Access Free Documentation
-- Users can open and read course documentation directly.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-#### • Add to My Courses
-- Save interesting courses to **My Courses** for quick access.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-#### • Search Courses
-- Search for specific courses by **Course Name** (Indexed search).
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-#### • Profile Section
-- View personal details (name, email).
+### `npm run eject`
 
-#### • My Courses Section
-- View and manage all added courses.
-- Access their documentation easily.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-#### • Feedback Section
-- Provide feedback for enrolled courses.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-#### • Search in My Courses
-- Search for specific courses added to **My Courses** by name.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
----
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-### 3. User Role: Admin
+## Learn More
 
-#### • Access Admin Dashboard
-- Redirected automatically after login.
-- Displays key statistics (Total Courses, Total Users).
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-#### • Add New Course
-- Create and publish new courses with required details.
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-#### • Edit Existing Course
+### Code Splitting
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-#### • Delete Course
-- Permanently remove a course from the platform.
+### Analyzing the Bundle Size
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
----
+### Making a Progressive Web App
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
+### Advanced Configuration
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
