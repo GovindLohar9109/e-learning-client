@@ -21,23 +21,23 @@ Directory structure:
         │       └── logo.svg
         ├── components/
         │   ├── cards/
-
+        │   │   └── CourseCard.jsx
         │   └── layout/
-
+        │       └── Layout.jsx
         ├── index.css
         ├── index.js.js
         ├── pages/
         │   ├── admin/
-
+        │   │   └── AdminDashBaord.jsx
         │   ├── auth/
-
+        │   │   └── Login.jsx
         │   ├── course/
-
+        │   │   └── Courses.jsx
         │   ├── feedback/
-
+        │   │   └── Feedback.jsx
         │   ├── notfound/
-
+        │   │   └── NotFound.jsx
         │   └── profile/
-
+        │       └── Profile.jsx
         ├── reportWebVitals.js
         └── setupTests.js
