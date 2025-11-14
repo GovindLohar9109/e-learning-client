@@ -1,5 +1,7 @@
 
 import { useState } from "react";
+import registerValidation from "../../validation/registerValidation.js";
+
 const userInitialData = {
     name: "",
     email: "",
@@ -13,6 +15,9 @@ export default function Register() {
     const [user, setUser] = useState(userInitialData);
     const [message, setMessage] = useState({ status: false, msg: "" });
     async function registerHandle(e) {
+
+        e.preventDefault();
+        var isValid = await registerValidation(user, setMessage);
     }
 
     function registerInputHandle(e) {
