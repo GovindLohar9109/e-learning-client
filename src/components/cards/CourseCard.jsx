@@ -1,8 +1,8 @@
 import { NavLink } from "react-router";
-
+import { addToMyCourse } from "../../redux/actions/myCourseAction";
 export default function CourseCard({ course }) {
     function handleAddToMyCourse() {
-        
+        addToMyCourse(course.id, 44);
     }
     return (
         <div className="card" style={{ width: "25rem" }}>

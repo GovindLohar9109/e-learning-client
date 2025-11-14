@@ -2,8 +2,9 @@ import { NavLink } from "react-router";
 import { removeMyCourse } from "../../redux/actions/myCourseAction";
 export default function MyCourseCard({ course }) {
     function handleRemoveCourse() {
-        removeMyCourse(course.id);
+        removeMyCourse(course.id,44);
     }
+
     return (
         <div className="card" style={{ width: "25rem" }}>
             <img src={`${process.env.PUBLIC_URL}/img/${course.image_url}`} className="card-img-top" alt="..." />

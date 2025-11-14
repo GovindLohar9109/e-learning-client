@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
 import MyCourseCard from "../../components/cards/MyCourseCard";
-import { CircularProgress } from "@mui/material";
 import { useEffect } from "react";
 import { getMyAllCourses } from "../../redux/actions/myCourseAction";
 export default function MyCoursesCourses() {
@@ -9,9 +8,9 @@ export default function MyCoursesCourses() {
         dispatch(getMyAllCourses());
     }, [dispatch])
     var data = useSelector((state) => state.myCourseData);
-    console.log(data)
+   
     return <>
-        {(data.status) ?
+        {(data.status && data.myCourses?.length>0) ?
             <div className="w-100 ">
                 <div style={{ height: "85vh", overflow: "auto" }}>
                     <div
@@ -31,8 +30,9 @@ export default function MyCoursesCourses() {
                     </div>
                     :
                 </div>
-            </div> : <div className="text-center mx-auto my-5 ">
-                <CircularProgress />
+            </div> :
+             <div className="text-center mx-auto my-5 ">
+               <h3>There are no Courses</h3>
             </div>
         }
     </>
