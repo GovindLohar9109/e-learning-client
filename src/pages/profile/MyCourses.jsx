@@ -1,12 +1,12 @@
 import MyCourseCard from "../../components/cards/MyCourseCard";
 import { CircularProgress } from "@mui/material";
 
-export default function MyCoursesCourses() {
+export default function MyCourses() {
 
 
     return <>
 
-        {(data.status) ?
+        {(true) ?
             <div className="w-100 ">
                 <div style={{ height: "85vh", overflow: "auto" }}>
 
@@ -21,7 +21,7 @@ export default function MyCoursesCourses() {
                         />
                     </div>
                     <div className="d-flex align-items-center justify-content-center flex-wrap mt-2 gap-4">
-                        {data.myCourses.map((course, idx) => {
+                        {[1, 2, 3].map((course, idx) => {
 
                             return <MyCourseCard key={idx} course={course} />
                         })}

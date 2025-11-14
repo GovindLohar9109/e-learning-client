@@ -11,6 +11,9 @@ import AdminLayout from "./components/layout/AdminLayout";
 import AdminDashBoard from "./pages/admin/AdminDashBoard";
 import Courses from "./pages/admin/Courses/Courses";
 import EditCourse from "./pages/admin/Courses/EditCourse";
+import MyCourses from "./pages/profile/MyCourses";
+import Profile from "./pages/profile/Profile";
+import Feedback from "./pages/profile/Feedback";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,9 +33,16 @@ const router = createBrowserRouter([
   { path: "register", element: <Register /> },
   // My profile routes
 
+  // My profile routes
+
   {
     path: "/myprofile",
-    element: <MyProfileLayout />,
+    element: <MyProfileLayout/>,
+    children: [
+      { index: true, element: <Profile /> },
+      { path: "mycourses", element: <MyCourses /> },
+      { path: "feedback", element: <Feedback /> },
+    ],
   },
 
   // Admin Routes
