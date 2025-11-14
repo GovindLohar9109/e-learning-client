@@ -8,9 +8,10 @@ export default function Courses() {
     const [search, setSearch] = useState("");
     var dispatch = useDispatch();
     useEffect(() => {
-        dispatch(getCoursesByLimit(8));
+        dispatch(getCoursesByLimit(5));
     }, [])
     var data = useSelector((state) => state.courseData);
+    console.log(data)
     return <div className="p-5">
         {(data.status) ?
             <div>

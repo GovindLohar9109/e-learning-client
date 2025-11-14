@@ -11,6 +11,7 @@ export default function AllCourses() {
         dispatch(getAllCourses());
     }, [])
     var data = useSelector((state) => state.courseData);
+    
     return <div>
         {(data.status) ?
             <div className="p-5">

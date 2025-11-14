@@ -47,7 +47,7 @@ export const getCourseDetailsById = (course_id) => async (disptach) => {
 }
 export const getCoursesByLimit = (limit) => async (disptach) => {
     try {
-        var result = await axios.get(url + `/courses/${limit}`);
+        var result = await axios.get(url + `/courses/limit/${limit}`);
         disptach({ type: "GET_COURSE_BY_LIMIT", payload: result.data })
     }
     catch (err) {
