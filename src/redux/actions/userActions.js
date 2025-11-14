@@ -21,7 +21,27 @@ export async function userLogin(user, setMessage) {
         }
     }
     catch (err) {
-        setMessage({ status: true, msg: "Server Error",err });
+        setMessage({ status: true, msg: "Server Error", err });
+        removeMsg(setMessage);
+        return;
+    }
+}
+export async function userRegister(user, setMessage) {
+    
+    try {
+        const resp = await axios.post(url + "/register", user);
+        console.log(resp)
+        if (resp.data.status) {
+            window.location = "/";
+        }
+        else {
+            setMessage({ status: true, msg: resp.data.msg });
+            removeMsg(setMessage);
+            return;
+        }
+    }
+    catch (err) {
+        setMessage({ status: true, msg: "Server Error", err });
         removeMsg(setMessage);
         return;
     }
