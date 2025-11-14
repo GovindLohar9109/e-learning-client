@@ -1,15 +1,19 @@
+import { useDispatch, useSelector } from "react-redux";
 import MyCourseCard from "../../components/cards/MyCourseCard";
 import { CircularProgress } from "@mui/material";
-
-export default function MyCourses() {
-
-
+import { useEffect } from "react";
+import { getMyAllCourses } from "../../redux/actions/myCourseAction";
+export default function MyCoursesCourses() {
+    var dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(getMyAllCourses());
+    }, [dispatch])
+    var data = useSelector((state) => state.myCourseData);
+    console.log(data)
     return <>
-
-        {(true) ?
+        {(data.status) ?
             <div className="w-100 ">
                 <div style={{ height: "85vh", overflow: "auto" }}>
-
                     <div
                         className="m-2 my-4 mb-5 w-50 m-auto p-2 shadow "
                     >
@@ -21,8 +25,7 @@ export default function MyCourses() {
                         />
                     </div>
                     <div className="d-flex align-items-center justify-content-center flex-wrap mt-2 gap-4">
-                        {[1, 2, 3].map((course, idx) => {
-
+                        {data.myCourses.map((course, idx) => {
                             return <MyCourseCard key={idx} course={course} />
                         })}
                     </div>
