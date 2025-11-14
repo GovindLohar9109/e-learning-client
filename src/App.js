@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home";
 import AllCourses from "./pages/course/AllCourses";
 import AllPremiumCourses from "./pages/PremiumCourses/AllPremiumCourses";
 import CourseDetail from "./pages/course/CourseDetails";
+import Login from "./pages/auth/Login";
 
 const router = createBrowserRouter([
   {
@@ -16,9 +17,12 @@ const router = createBrowserRouter([
       { path: "course-details/:course_id", element: <CourseDetail /> },
 
     ],
+  }
+,
+    // authentication routes
 
+  { path: "login", element:<Login/> },
 
-  },
 
 ])
 function App() {
