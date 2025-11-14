@@ -1,5 +1,16 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout from "./components/layout/Layout";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    
+  },
+
+])
 function App() {
-  return <h1>Welcome to E-Learning Management System</h1>;
+  return <RouterProvider router={router} />;
 }
 
 export default App;
