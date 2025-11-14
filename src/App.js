@@ -7,6 +7,10 @@ import CourseDetail from "./pages/course/CourseDetails";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import MyProfileLayout from "../src/components/layout/MyProfileLayout"
+import AdminLayout from "./components/layout/AdminLayout";
+import AdminDashBoard from "./pages/admin/AdminDashBoard";
+import Courses from "./pages/admin/Courses/Courses";
+import EditCourse from "./pages/admin/Courses/EditCourse";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +35,16 @@ const router = createBrowserRouter([
     element: <MyProfileLayout />,
   },
 
+  // Admin Routes
+  {
+    path: "/admin",
+    element: <AdminLayout />,
+    children: [
+      { index: true, element: <AdminDashBoard /> },
+      { path: "courses-manage", element: <Courses /> },
+      { path: "edit-course/:course_id", element: <EditCourse /> },
+    ],
+  },
 ])
 function App() {
   return <RouterProvider router={router} />;
