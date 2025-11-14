@@ -54,5 +54,11 @@ header > div{
     align-items: center;
 }
 
+.search-bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;  /* keep it above other elements */
+  background-color: white;  /* prevent overlap transparency */
+}
 
 
