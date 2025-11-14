@@ -11,9 +11,8 @@ const userInitialData = {
 export default function Register() {
 
     const [user, setUser] = useState(userInitialData);
-    const [message,setMessage] = useState({ status: false, msg: "" });
+    const [message, setMessage] = useState({ status: false, msg: "" });
     async function registerHandle(e) {
-
     }
 
     function registerInputHandle(e) {
@@ -33,7 +32,7 @@ export default function Register() {
                 <h4 className="text-center fw-bold mb-4">REGISTER</h4>
 
                 <form>
-                     <div className="mb-3">
+                    <div className="mb-3">
                         <label htmlFor="exampleInputName" className="form-label fw-semibold">
                             <i className="fa-regular fa-envelope me-2 text-dark"></i>Enter Full Name
                         </label>

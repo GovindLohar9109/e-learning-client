@@ -6,6 +6,19 @@ export let url = "http://localhost:8000";
 
 
 
+
+
+
+
+
+
+
+
+export function removeMsg(setMsg) {
+    setTimeout(() => {
+        setMsg({ status: false, msg: "" });
+    }, 4000)
+}
 export const list1 = [
     {
         text: "100+ Online Courses",

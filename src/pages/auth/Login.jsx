@@ -1,4 +1,6 @@
 import { useState } from "react";
+import loginValidation from "../../validation/loginValidation.js";
+
 const userInitialData = {
     email: "",
     password: "",
@@ -8,7 +10,10 @@ export default function Login() {
 
     const [user, setUser] = useState(userInitialData);
     const [message, setMessage] = useState({ status: false, msg: "" });
-
+    async function loginHandle(e) {
+        e.preventDefault();
+        var isValid = await loginValidation(user, setMessage);
+    }
     function loginInputHandle(e) {
         var name = e.target.name;
         var value = e.target.value;
@@ -33,8 +38,8 @@ export default function Login() {
                         </label>
                         <input
                             type="email"
-                            name="user_email"
-                            defaultValue={user.user_email}
+                            name="email"
+                            defaultValue={user.email}
                             onChange={loginInputHandle}
                             className="form-control"
                             id="exampleInputEmail1"
@@ -48,8 +53,8 @@ export default function Login() {
                         </label>
                         <input
                             type="password"
-                            name="user_password"
-                            defaultValue={user.user_password}
+                            name="password"
+                            defaultValue={user.password}
                             onChange={loginInputHandle}
                             className="form-control"
                             id="exampleInputPassword1"
@@ -60,7 +65,7 @@ export default function Login() {
                     <a href="/register" className="text-primary">Register</a>
                     <button
                         type="button"
-
+                        onClick={loginHandle}
                         className="btn btn-primary mt-3 fw-bold mx-auto d-block w-50 mt-3"
                     >
                         Sign In
