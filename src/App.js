@@ -5,6 +5,7 @@ import AllCourses from "./pages/course/AllCourses";
 import AllPremiumCourses from "./pages/PremiumCourses/AllPremiumCourses";
 import CourseDetail from "./pages/course/CourseDetails";
 import Login from "./pages/auth/Login";
+import Register from "./pages/auth/Register";
 
 const router = createBrowserRouter([
   {
@@ -18,10 +19,11 @@ const router = createBrowserRouter([
 
     ],
   }
-,
-    // authentication routes
+  ,
+  // authentication routes
 
-  { path: "login", element:<Login/> },
+  { path: "login", element: <Login /> },
+  { path: "register", element: <Register /> }
 
 
 ])
