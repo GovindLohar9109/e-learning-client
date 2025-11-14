@@ -1,5 +1,6 @@
 import { useState } from "react";
 import loginValidation from "../../validation/loginValidation.js";
+import { userLogin } from "../../redux/actions/userActions.js";
 
 const userInitialData = {
     email: "",
@@ -13,6 +14,9 @@ export default function Login() {
     async function loginHandle(e) {
         e.preventDefault();
         var isValid = await loginValidation(user, setMessage);
+        if (isValid) {
+            userLogin(user, setMessage);
+        }
     }
     function loginInputHandle(e) {
         var name = e.target.name;

@@ -2,14 +2,7 @@
 import { isValidEmail, isValidPassword } from "../validation/regularEx";
 import { removeMsg } from "../assets/data";
 
-var passMsg = <>
-    <p><strong>Password must contain:</strong></p>
-    <ul>
-        <li>At least one uppercase letter (A–Z)</li>
-        <li>At least one lowercase letter (a–z)</li>
-        <li>At least one number (0–9)</li>
-        <li>Minimum 8 characters in length</li>
-    </ul></>
+
 
 export default async function loginValidation(user, setMessage) {
 
@@ -27,7 +20,7 @@ export default async function loginValidation(user, setMessage) {
 
     }
     else if (!isValidPassword(user.password)) {
-        setMessage({ status: true, msg: passMsg });
+        setMessage({ status: true, msg: "Please Enter Valid Password" });
 
     }
     else return true;
