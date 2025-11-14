@@ -2,7 +2,7 @@ import { NavLink } from "react-router";
 
 
 export default function Navbar() {
-    var isLogin=false; // temparary to check 
+    var isLogin=true; // temparary to check 
     return (
         <>
             <header className="flex-wrap">

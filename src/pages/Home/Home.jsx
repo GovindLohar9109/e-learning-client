@@ -1,22 +1,16 @@
 
 import { list1, list2 } from "../../assets/data.js";
-
 import Background from "../../components/common/Background.jsx";
 import Layer from "./Layer";
-import Footer from "../../components/common/Footer";
-
+import Courses from "../course/Courses.jsx";
 
 export default function Home() {
-
 
     return (<>
         <Background img={"bg1"} />
         <Layer list={list1} />
-        <h1>Courses will be there</h1>
+        <Courses />
         <Layer list={list2} />
-        
-
-
-    </>
+     </>
     )
 }
