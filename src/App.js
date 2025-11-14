@@ -6,7 +6,7 @@ import AllPremiumCourses from "./pages/PremiumCourses/AllPremiumCourses";
 import CourseDetail from "./pages/course/CourseDetails";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
-
+import MyProfileLayout from "../src/components/layout/MyProfileLayout"
 const router = createBrowserRouter([
   {
     path: "/",
