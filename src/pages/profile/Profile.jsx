@@ -1,7 +1,4 @@
-
-
 export default function Profile() {
-
     return (<>
         <div className=" w-100 h-100 d-flex align-items-center justify-content-center">
             <form className="shadow p-5 w-50">
