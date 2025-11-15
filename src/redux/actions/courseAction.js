@@ -20,8 +20,9 @@ export const deleteCourse = async (course_id) => {
 export const editCourse = async (course_id, course) => {
     try {
         var result = await axios.put(url + `/courses/${course_id}`, course);
+        console.log(result)
         if (result.data.status) {
-            window.location = "/admin/courses-manage"
+            window.location = "/admin/courses/manage"
         }
     }
     catch (err) {

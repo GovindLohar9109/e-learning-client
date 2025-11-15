@@ -16,7 +16,7 @@ export default function AdminCourseCard({ course })
                 <span className="card-text">Duration : {course.duration} </span>
             </div>
             <ul className="list-group list-group-flush text-center align-items-center" >
-                <li className="list-group-item w-100"><NavLink to={`/admin/edit-course/${course.id}`} className="text-deco-none"><button type="button" style={{ width: "100%" }} className="btn btn-danger  d-block text-bold" >Edit</button></NavLink></li>
+                <li className="list-group-item w-100"><NavLink to={`/admin/edit/course/${course.id}`} className="text-deco-none"><button type="button" style={{ width: "100%" }} className="btn btn-danger  d-block text-bold" >Edit</button></NavLink></li>
                 <li className="list-group-item w-100"> <button type="button" onClick={handleDeleteCourse} style={{ width: "100%" }} className="btn btn-secondary d-block text-bold">Delete </button> </li>
             </ul>        </div>
     )

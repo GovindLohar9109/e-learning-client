@@ -51,8 +51,8 @@ const router = createBrowserRouter([
     element: <AdminLayout />,
     children: [
       { index: true, element: <AdminDashBoard /> },
-      { path: "courses-manage", element: <Courses /> },
-      { path: "edit-course/:course_id", element: <EditCourse /> },
+      { path: "courses/manage", element: <Courses /> },
+      { path: "edit/course/:course_id", element: <EditCourse /> },
     ],
   },
 ])
