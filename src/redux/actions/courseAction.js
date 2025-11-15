@@ -12,9 +12,11 @@ export const addCourse = async (course, setMessage) => {
 }
 export const deleteCourse = async (course_id) => {
     try {
-        var result = await axios.delete(url + `/courses/${course_id}`);
+        var resul=await axios.delete(url + `/courses/${course_id}`);
+        console.log(resul)
     }
     catch (err) {
+        return 
     }
 }
 export const editCourse = async (course_id, course) => {

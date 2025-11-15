@@ -5,7 +5,7 @@ export default function AdminCourseCard({ course })
     
     function handleDeleteCourse() {        
         deleteCourse(course.id);
-        window.location = "/admin/courses-manage";
+        window.location = "/admin/courses/manage";
     }
     return (
         <div className="card shadow" style={{ width: "25rem" }}>

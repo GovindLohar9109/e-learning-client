@@ -14,7 +14,7 @@ export default function Courses() {
   
      return <div className="w-100 ">
             <div style={{ height: "85vh", overflow: "auto" }}>
-                <div className="d-flex align-item-center">
+                <div >
                     <div
                         className="m-2 my-4 mb-5 w-50 m-auto p-2 shadow "
                     >
@@ -25,13 +25,14 @@ export default function Courses() {
                             aria-label="Search"
                         />
                     </div>
-                    <div className="m-5">
-                        <NavLink to="/add-course"><button type="button" className="btn  bg-primary text-white text-bold px-5">ADD NEW COURSE</button></NavLink>                    </div>
+                    
                 </div>
                 {(data.status) ?
                     <div className="d-flex align-items-center justify-content-center flex-wrap mt-2 gap-4">
-                        {data.courses.map((course, idx) => {                            return <AdminCourseCard key={idx} course={course} />
-                        })}                    </div>
+                        {data.courses.map((course, idx) => {                            
+                            return <AdminCourseCard key={idx} course={course} />
+                        })}                    
+                    </div>
                     :
                     <div className="text-center">
                          <h3>There are no Courses</h3>

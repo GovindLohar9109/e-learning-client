@@ -18,7 +18,7 @@ export default function Navbar() {
                                     <NavLink to="/" className="nav-link active text-bold" aria-current="page" href="#">Home</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink to="/all-courses" className="nav-link text-bold" href="#">Courses</NavLink>
+                                    <NavLink to="/all/courses" className="nav-link text-bold" href="#">Courses</NavLink>
                                 </li>
 
                                 <li className="nav-item">
