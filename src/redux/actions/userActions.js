@@ -5,8 +5,7 @@ export async function userLogin(user, setMessage) {
     try {
         const resp = await axios.post(url + "/login", user);
         console.log(resp)
-        if (resp.data.status) {
-
+        if (resp.data.status) {            
             if (resp.data.user.role_id == 0) {     // user
                 window.location = "/";
             }
@@ -26,9 +25,7 @@ export async function userLogin(user, setMessage) {
         return;
     }
 }
-export async function userRegister(user, setMessage) {
-    
-    try {
+export async function userRegister(user, setMessage) {    try {
         const resp = await axios.post(url + "/register", user);
         console.log(resp)
         if (resp.data.status) {
@@ -45,9 +42,7 @@ export async function userRegister(user, setMessage) {
         removeMsg(setMessage);
         return;
     }
-}
-
-export const getUsersCount = async (setUsersCount) => {
+}export const getUsersCount = async (setUsersCount) => {
     try {
         var result = await axios.get(url + `/users/count`);
         setUsersCount(result.data)
