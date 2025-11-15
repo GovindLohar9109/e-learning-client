@@ -61,7 +61,8 @@ export const getCoursesByLimit = (limit,search) => async (disptach) => {
 export const getCoursesCount = async (setCoursesCount) => {
     try {
         var result = await axios.get(url + `/courses/count`);
-        setCoursesCount(result.data.count);
+        
+        setCoursesCount(result.data);
     }
     catch (err) {
         setCoursesCount(0)

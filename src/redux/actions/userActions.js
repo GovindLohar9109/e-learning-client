@@ -50,7 +50,7 @@ export async function userRegister(user, setMessage) {
 export const getUsersCount = async (setUsersCount) => {
     try {
         var result = await axios.get(url + `/users/count`);
-        setUsersCount(result.data.count)
+        setUsersCount(result.data)
     }
     catch (err) {
         setUsersCount(0)
