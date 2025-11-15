@@ -22,7 +22,7 @@ export default function Navbar() {
                                 </li>
 
                                 <li className="nav-item">
-                                    <NavLink to="/premium-courses" className="nav-link text-bold" href="#">Future Scope</NavLink>
+                                    <NavLink to="/premium/courses" className="nav-link text-bold" href="#">Future Scope</NavLink>
                                 </li>
 
                             </ul>
