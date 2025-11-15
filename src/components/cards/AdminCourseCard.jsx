@@ -1,6 +1,6 @@
 import { NavLink } from "react-router";
 import { deleteCourse } from "../../redux/actions/courseAction";
-export default function CourseCard({ course }) 
+export default function AdminCourseCard({ course }) 
 {    
     
     function handleDeleteCourse() {        
