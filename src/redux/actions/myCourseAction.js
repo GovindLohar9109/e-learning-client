@@ -9,10 +9,10 @@ export const addToMyCourse = async (course_id, user_id) => {
     catch (err) {
     }
 }
-export const getMyAllCourses = () => async (disptach) => {
+export const getMyAllCourses = (search) => async (disptach) => {
     var user_id = 44;
     try {
-        var result = await axios.get(url + `/mycourses/${user_id}`);
+        var result = await axios.get(url + `/mycourses/${user_id}?search=${search}`);
         console.log(result)
         disptach({ type: "GET_MY_ALL_COURSES", payload: result.data })
     }
