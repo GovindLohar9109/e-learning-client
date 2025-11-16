@@ -27,7 +27,7 @@ export default function Navbar() {
                     <div className="">
                         <ul className="nav">
 
-                            {(isLogin) ? <>
+                            {isLogin ? <>
                                 <li className="nav-item login ">
                                     <NavLink to="/login" className="nav-link active " aria-current="page" href="#">
                                         <button type="button" className="btn btn-light text-bold px-5">LOGIN</button>
