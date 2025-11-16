@@ -1,11 +1,7 @@
 import { NavLink } from "react-router";
-
-
 export default function Navbar() {
     var isLogin=false; // temparary to check 
-    return (
-        <>
-            <header className="flex-wrap">
+    return <header className="flex-wrap">
                 <div className="d-flex gap-2">
                     <h1 className="text-white text-bold">iSchool</h1>
                     <span className="text-white text-bold">Learn and Implements</span>
@@ -66,7 +62,4 @@ export default function Navbar() {
                 </div>
 
             </header>
-        </>
-    )
-
 }

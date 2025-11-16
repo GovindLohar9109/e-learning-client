@@ -4,12 +4,9 @@ import Footer from "../common/Footer";
 export default function Layout() {
 
     return (
-        <>
-            <Header />
+        <><Header />
             <Outlet />
             <Footer />
-
-
         </>
     )
 
