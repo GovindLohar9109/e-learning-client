@@ -28,11 +28,11 @@ a{
 .text-deco-none{
     text-decoration: none;
 }
-/* ================================================================= */header{
+/* ================================================================= */
+header{
     min-height:80px;
     width:100%;
     padding:20px;
-    
     background-color: red;
     display: flex;
     align-items: center;
