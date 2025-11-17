@@ -8,13 +8,9 @@ const router = createBrowserRouter([
     children:[
       {index:true,element:<Home/>}
     ]
-    
-    
   },
-
 ])
 function App() {
   return <RouterProvider router={router} />;
 }
-
 export default App;
