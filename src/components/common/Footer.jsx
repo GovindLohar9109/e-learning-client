@@ -1,10 +1,7 @@
 export default function Footer() {
-  return (
-    <>
-      <footer className="my-4 w-100 h-100 mt-2">
+  return <footer className="my-4 w-100 h-100 mt-2">
         <div className="container-fluid bg-dark text-white py-4">
           <div className="row text-center justify-content-evenly">
-
             {/* About Us */}
             <div className="col-lg-2 col-md-6 col-sm-8 mb-3">
               <h5 className="fw-bold">About Us</h5>
@@ -13,7 +10,6 @@ export default function Footer() {
                 skills, build confidence, and achieve success.
               </p>
             </div>
-
             {/* Category */}
             <div className="col-lg-2 col-md-6 col-sm-8 mb-3">
               <h5 className="fw-bold">Categories</h5>
@@ -22,7 +18,6 @@ export default function Footer() {
                 many more.
               </p>
             </div>
-
             {/* Contact Us */}
             <div className="col-lg-2 col-md-6 col-sm-8 mb-3">
               <h5 className="fw-bold">Contact Us</h5>
@@ -32,7 +27,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
         {/* Moving Text / Marquee */}
         <div className="bg-dark text-white py-2 mt-3">
           <marquee behavior="scroll" direction="left" style={{ fontSize: "1.2rem" }}>
@@ -40,6 +34,4 @@ export default function Footer() {
           </marquee>
         </div>
       </footer>
-    </>
-  );
 }
