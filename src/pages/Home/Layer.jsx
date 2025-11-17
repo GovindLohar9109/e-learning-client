@@ -1,6 +1,5 @@
 export default function Layer({ list }) {
-  return (
-    <div
+  return <div
       className="  w-100 p-3 text-center text-bold text-white"
       style={{ background: 'red' }}
     >
@@ -16,5 +15,4 @@ export default function Layer({ list }) {
         })}
       </div>
     </div>
-  );
 }

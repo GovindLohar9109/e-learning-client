@@ -1,6 +1,5 @@
 export default function Footer() {
-  return (
-    <footer className="my-4 w-100 h-100 mt-2">
+  return <footer className="my-4 w-100 h-100 mt-2">
       <div className="container-fluid bg-dark text-white py-4">
         <div className="row text-center justify-content-evenly">
           {/* About Us */}
@@ -40,5 +39,5 @@ export default function Footer() {
         </marquee>
       </div>
     </footer>
-  );
+  
 }
