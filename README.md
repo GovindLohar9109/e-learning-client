@@ -1,77 +1,38 @@
-#  E-Learning Management System (ELMS) — Client
 
-The **E-Learning Management System (ELMS)** is a web-based platform that allows users to explore, learn, and manage courses through interactive documentation.  
-This repository contains the **frontend client**, built using **React** (with Vite) for a fast and responsive user experience.
+ ## E-Learning Frontend
 
----
+This is the frontend of the E-Learning Management System — a web application built using React.js.
+It allows users to log in, browse courses, give feedback, and manage profiles.
+The project is structured for scalability and maintainability.
 
-##  Overview
-The ELMS client enables users to **learn through free documentation** and provides **role-based access control**.  
-Users can browse and enroll in courses, while admins manage all course-related operations.
+ Features
 
----
+ User Authentication – Login functionality for users and admins
 
-##  User Roles & Functional Use Cases
+ Courses Page – View and explore available courses
 
-### 1. User Authentication
-- New users can **register** or **log in** securely.
-- Upon login, the system identifies the user’s role:
-  - **User**
-  - **Admin**
-- All passwords are securely hashed and stored in the backend.
+ Admin Dashboard – Manage courses and users
 
----
+ Feedback System – Users can provide feedback on courses
 
-###  2. User Role: User
+ Profile Management – View and edit user profile
 
-#### • View All Courses
-- Browse all available courses on the platform.
-- Each course card shows:
-  - Title  
-  - Description  
-  - Options to **view free documentation** or **add to My Courses**.
+ Not Found Page – Custom 404 error page
 
-#### • Access Free Documentation
-- Users can open and read course documentation directly.
+ Reusable Components – Card and layout components for consistency
 
-#### • Add to My Courses
-- Save interesting courses to **My Courses** for quick access.
+ Modular Folder Structure for easier maintenance and scaling
 
-#### • Search Courses
-- Search for specific courses by **Course Name** (Indexed search).
-
-#### • Profile Section
-- View personal details (name, email).
-
-#### • My Courses Section
-- View and manage all added courses.
-- Access their documentation easily.
-
-#### • Feedback Section
-- Provide feedback for enrolled courses.
-
-#### • Search in My Courses
-- Search for specific courses added to **My Courses** by name.
-
----
-
-### 3. User Role: Admin
-
-#### • Access Admin Dashboard
-- Redirected automatically after login.
-- Displays key statistics (Total Courses, Total Users).
-
-#### • Add New Course
-- Create and publish new courses with required details.
-
-#### • Edit Existing Course
-
-
-#### • Delete Course
-- Permanently remove a course from the platform.
-
-
----
-
-
+ ### Project Structure
+e-learning-frontend/
+├── public/              # Static files (index.html, icons, manifest)
+├── src/
+│   ├── assets/          # CSS and image assets
+│   ├── components/      # Reusable UI components
+│   ├── pages/           # Page-level components (Admin, Login, etc.)
+│   ├── App.js           # Main React component
+│   ├── index.js         # Entry point of the app
+│   └── setupTests.js    # Jest + React Testing Library setup
+├── package.json         # Project metadata and dependencies
+└── README.md
 
