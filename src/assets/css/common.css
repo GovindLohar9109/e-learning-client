@@ -2,24 +2,17 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-}
-
-
-/* ===================COMMOM PROPETY LIKE BOOTSTRAP=============== */
-
+}/* ===================COMMOM PROPETY LIKE BOOTSTRAP=============== */
 .text-bold{
-
     font-weight: bold!important;
 }
 a{
     text-decoration: none;
     color: white!important;
-
 }
 .align-items-center{
     align-items: center;
 }
-
 .justify-content-center{
     justify-content: center;
 }
@@ -35,24 +28,16 @@ a{
 .text-deco-none{
     text-decoration: none;
 }
-
 /* ================================================================= */
-
-
 header{
     min-height:80px;
     width:100%;
     padding:20px;
-    
     background-color: red;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 header > div{
     align-items: center;
 }
-
-
-

@@ -16,10 +16,7 @@ const router = createBrowserRouter([
       { path: "course-details/:course_id", element: <CourseDetail /> },
 
     ],
-
-
-  },
-
+},
 ])
 function App() {
   return <RouterProvider router={router} />;
