@@ -1,7 +1,10 @@
 import Background from "../../components/common/Background.jsx";
+import Courses from "../course/Courses.jsx";
+
 export default function Home() {
-    return <>
+    return (<>
         <Background img={"bg1"} />
-        <h1>Courses will be there</h1>
-       </>
+        <Courses />
+     </>
+    )
 }
