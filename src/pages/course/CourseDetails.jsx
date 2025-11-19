@@ -1,10 +1,7 @@
-import { NavLink, useParams } from "react-router";
+import { NavLink } from "react-router";
 
 export default function CourseDetail() {
-    var { course_id } = useParams();
-    return (<>
-
-        <div>
+    return  <div>
             <h2 className="text-center py-3">Welcome to (Node.js)</h2>
             <div className="w-50 m-auto">
                 <img src={`${process.env.PUBLIC_URL}/img/${"bg1.png"}`} className="w-100 h-100 card-img-top border" alt="..." />
@@ -31,5 +28,4 @@ export default function CourseDetail() {
                 </div>
             </div>
         </div>
-    </>)
-}
+    }
