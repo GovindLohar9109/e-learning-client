@@ -17,8 +17,8 @@ export default function Register() {
     }
 
     function registerInputHandle(e) {
-        var name = e.target.name;
-        var value = e.target.value;
+        const name = e.target.name;
+        const value = e.target.value;
         setUser({ ...user, [name]: value });
     }
     return (
