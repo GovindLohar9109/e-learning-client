@@ -2,10 +2,7 @@ import Background from "../../components/common/Background"
 import CourseCard from "../../components/cards/CourseCard"
 
 export default function AllCourses() {
-
-
-    return <>
-        <div className="p-5">
+    return <div className="p-5">
             <div>
                 <Background img={"bg2"} />
             </div>
@@ -23,5 +20,4 @@ export default function AllCourses() {
                 </div>
             </div>
         </div>
-    </>
-}
+    }
