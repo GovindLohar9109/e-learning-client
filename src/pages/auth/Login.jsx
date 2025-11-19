@@ -10,14 +10,13 @@ export default function Login() {
     const [message, setMessage] = useState({ status: false, msg: "" });
 
     function loginInputHandle(e) {
-        var name = e.target.name;
-        var value = e.target.value;
+        const  name = e.target.name;
+        const value = e.target.value;
         setUser({ ...user, [name]: value });
     }
 
-    return (
-        <div className="d-flex align-items-center w-100" style={{ height: "80vh" }}>
-            <div className="container p-4  shadow rounded " style={{ maxWidth: "500px" }}>
+    return <div className="login d-flex align-items-center w-100" >
+            <div className="container p-4  shadow rounded " >
                 {(message.status) ?
                     <div class="alert alert-primary" role="alert">
                         {message.msg}
@@ -68,6 +67,6 @@ export default function Login() {
                 </form>
             </div>
         </div>
-    );
+    
 }
 
