@@ -3,6 +3,7 @@ import Layout from "./components/layout/Layout";
 import Home from "./pages/Home/Home";
 import AllCourses from "./pages/course/AllCourses";
 import CourseDetail from "./pages/course/CourseDetails";
+import Login from "./pages/auth/Login";
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,9 @@ const router = createBrowserRouter([
       { path: "course-details/:course_id", element: <CourseDetail /> },
 
     ],
-},
+  }
+,// authentication routes
+{ path: "login", element:<Login/> },
 ])
 function App() {
   return <RouterProvider router={router} />;

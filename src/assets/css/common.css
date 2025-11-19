@@ -41,3 +41,9 @@ header{
 header > div{
     align-items: center;
 }
+.login{
+    height:80vh;
+}
+.login > div{
+    max-width: 500px;
+}
