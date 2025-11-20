@@ -7,9 +7,10 @@
     font-weight: bold!important;
 }
 a{
-    text-decoration: none;
-    color: white!important;
+    text-decoration: none!important;
+    color: white;
 }
+
 .align-items-center{
     align-items: center;
 }
@@ -46,4 +47,20 @@ header > div{
 }
 .login > div{
     max-width: 500px;
+}
+.card{
+  width: "25rem" ; 
+}
+
+.card button{
+     width: "100%" 
+}
+marquee{
+     fontSize: '1.2rem' 
+}
+.register{
+     height: "80vh" 
+}
+.register > div{
+    maxWidth: "500px" 
 }

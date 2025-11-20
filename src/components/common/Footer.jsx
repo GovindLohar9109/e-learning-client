@@ -32,7 +32,7 @@ export default function Footer() {
         <marquee
           behavior="scroll"
           direction="left"
-          style={{ fontSize: '1.2rem' }}
+          
         >
           🎓 Welcome to <span className="text-warning fw-bold">iSchool</span> —
           Learn, Build, and Grow!
