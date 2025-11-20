@@ -15,9 +15,8 @@ export default function Register() {
     const [user, setUser] = useState(userInitialData);
     const [message, setMessage] = useState({ status: false, msg: "" });
     async function registerHandle(e) {
-
         e.preventDefault();
-        var isValid = await registerValidation(user, setMessage);
+        const isValid = await registerValidation(user, setMessage);
     }
 
     function registerInputHandle(e) {

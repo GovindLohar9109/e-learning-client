@@ -1,8 +1,7 @@
 import { NavLink } from "react-router";
 export default function CourseCard() {
     
-    return (
-        <div className="card" >
+    return <div className="card" >
             <div className="">
                 <img src={`${process.env.PUBLIC_URL}/img/bg1.png`} className="w-100 h-100 card-img-top" alt="..." />
             </div>
@@ -17,5 +16,4 @@ export default function CourseCard() {
                 <li className="list-group-item w-100"><button type="button"   className="btn btn-primary d-block text-bold">Add To My</button></li>
             </ul>
         </div>
-    )
 }

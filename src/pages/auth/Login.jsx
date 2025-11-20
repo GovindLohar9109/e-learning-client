@@ -3,16 +3,14 @@ import loginValidation from "../../validation/loginValidation.js";
 
 const userInitialData = {
     email: "",
-    password: "",
-
-}
+    password: "",}
+    
 export default function Login() {
-
     const [user, setUser] = useState(userInitialData);
     const [message, setMessage] = useState({ status: false, msg: "" });
     async function loginHandle(e) {
         e.preventDefault();
-        var isValid = await loginValidation(user, setMessage);
+        const isValid = await loginValidation(user, setMessage);
     }
     function loginInputHandle(e) {
         const  name = e.target.name;
