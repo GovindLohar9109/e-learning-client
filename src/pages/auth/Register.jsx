@@ -21,13 +21,13 @@ export default function Register() {
     }
 
     function registerInputHandle(e) {
-        var name = e.target.name;
-        var value = e.target.value;
+        const name = e.target.name;
+        const value = e.target.value;
         setUser({ ...user, [name]: value });
     }
     return (
-        <div className="d-flex align-items-center w-100" style={{ height: "80vh" }}>
-            <div className="container p-4  shadow rounded " style={{ maxWidth: "500px" }}>
+        <div className="d-flex align-items-center w-100 register" >
+            <div className="container p-4  shadow rounded " >
                 {(message.status) ?
                     <div class="alert alert-primary" role="alert">
                         {message.msg}
