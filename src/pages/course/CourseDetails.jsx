@@ -1,7 +1,8 @@
 import { NavLink } from "react-router";
 
 export default function CourseDetail() {
-  return <div className="course-details">
+  return (
+    <div className="course-details">
       <h2 className="text-center py-3">Welcome to (Node.js)</h2>
       <div className="w-50 m-auto">
         <img
@@ -45,5 +46,5 @@ export default function CourseDetail() {
         </div>
       </div>
     </div>
-  
+  );
 }

@@ -1,5 +1,6 @@
 import { isValidEmail, isValidPassword, isValidText } from "./regularEx";
 import { passMsg, removeMsg } from "../assets/data";
+
 export default async function registerValidation(user, setMessage) {
     for (const key in user) {
         if (user[key] == "") {

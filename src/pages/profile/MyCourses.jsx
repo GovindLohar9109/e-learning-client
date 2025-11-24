@@ -2,10 +2,11 @@ import MyCourseCard from "../../components/cards/MyCourseCard";
 import { CircularProgress } from "@mui/material";
 
 export default function MyCoursesCourses() {
-  return  <>
-      {true ? ( // here when course will be get then it will be dynamic 
+  return (
+    <>
+      {true ? ( // here when course will be get then it will be dynamic
         <div className="w-100 ">
-          <div style={{ height: "85vh", overflow: "auto" }}>
+          <div>
             <div className="m-2 my-4 mb-5 w-50 m-auto p-2 shadow ">
               <input
                 className="form-control m-2 p-2"
@@ -28,5 +29,5 @@ export default function MyCoursesCourses() {
         </div>
       )}
     </>
-  
+  );
 }

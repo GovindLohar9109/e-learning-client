@@ -1,11 +1,11 @@
 import { NavLink } from "react-router";
 
 export default function LeftSide() {
-  return <div className="bg-success p-3  h-100" style={{ maxWidth: "300px" }}>
+  return (
+    <div className="bg-success p-3  h-100">
       <div className="m-2">
-        <div className="w-100  m-auto " style={{ height: "250px" }}>
+        <div className="w-100  m-auto ">
           <img
-            style={{ borderRadius: "100%" }}
             src={`${process.env.PUBLIC_URL}/img/bg1.png`}
             className="w-100 h-75 m-auto d-block"
             alt=""
@@ -35,5 +35,5 @@ export default function LeftSide() {
         </div>
       </div>
     </div>
-  
+  );
 }

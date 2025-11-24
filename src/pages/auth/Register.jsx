@@ -21,7 +21,8 @@ export default function Register() {
     const value = e.target.value;
     setUser({ ...user, [name]: value });
   }
-  return <div className="d-flex align-items-center w-100 register">
+  return (
+    <div className="d-flex align-items-center w-100 register">
       <div className="container p-4  shadow rounded ">
         {message.status ? (
           <div class="alert alert-primary" role="alert">
@@ -119,5 +120,5 @@ export default function Register() {
         </form>
       </div>
     </div>
-  
+  );
 }

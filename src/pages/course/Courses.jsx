@@ -5,7 +5,8 @@ import { useState } from "react";
 export default function Courses() {
   const [search, setSearch] = useState("");
 
-  return <div className="p-5">
+  return (
+    <div className="p-5">
       <div>
         <div className="m-2 my-4 mb-5 w-25 m-auto">
           <input
@@ -33,5 +34,5 @@ export default function Courses() {
         </div>
       </div>
     </div>
-  
+  );
 }

@@ -1,6 +1,7 @@
 import { NavLink } from "react-router";
 export default function CourseCard() {
-  return <div className="card">
+  return (
+    <div className="card">
       <div className="">
         <img
           src={`${process.env.PUBLIC_URL}/img/bg1.png`}
@@ -39,5 +40,5 @@ export default function CourseCard() {
         </li>
       </ul>
     </div>
-
+  );
 }

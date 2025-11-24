@@ -19,7 +19,8 @@ export default function Login() {
     setUser({ ...user, [name]: value });
   }
 
-  return <div className="login d-flex align-items-center w-100">
+  return (
+    <div className="login d-flex align-items-center w-100">
       <div className="container p-4  shadow rounded ">
         {message.status ? (
           <div class="alert alert-primary" role="alert">
@@ -80,5 +81,5 @@ export default function Login() {
         </form>
       </div>
     </div>
-  
+  );
 }
