@@ -5,7 +5,7 @@ import AllCourses from "./pages/course/AllCourses";
 import CourseDetail from "./pages/course/CourseDetails";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
-
+import MyProfileLayout from "../src/components/layout/MyProfileLayout"
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,8 +20,13 @@ const router = createBrowserRouter([
   ,
   // authentication routes
   { path: "login", element: <Login /> },
-  { path: "register", element: <Register /> }
+  { path: "register", element: <Register /> },
+  // My profile routes
 
+  {
+    path: "/myprofile",
+    element: <MyProfileLayout />,
+  },
 
 ])
 function App() {

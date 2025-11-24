@@ -29,11 +29,7 @@ export default function Footer() {
       </div>
       {/* Moving Text / Marquee */}
       <div className="bg-dark text-white py-2 mt-3">
-        <marquee
-          behavior="scroll"
-          direction="left"
-          
-        >
+        <marquee behavior="scroll" direction="left">
           🎓 Welcome to <span className="text-warning fw-bold">iSchool</span> —
           Learn, Build, and Grow!
         </marquee>
