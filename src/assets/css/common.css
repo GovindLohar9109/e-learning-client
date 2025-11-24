@@ -1,58 +1,69 @@
-*{
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+} /* ===================COMMOM PROPETY LIKE BOOTSTRAP=============== */
+.text-bold {
+  font-weight: bold !important;
+}
+a {
+  text-decoration: none !important;
+  color: white;
 }
 
-
-/* ===================COMMOM PROPETY LIKE BOOTSTRAP=============== */
-
-.text-bold{
-
-    font-weight: bold!important;
+.align-items-center {
+  align-items: center;
 }
-a{
-    text-decoration: none;
-    color: white!important;
-
+.justify-content-center {
+  justify-content: center;
 }
-.align-items-center{
-    align-items: center;
+.align-items-space-between {
+  align-items: space-between;
 }
-
-.justify-content-center{
-    justify-content: center;
+.flex-dir-col {
+  flex-direction: column;
 }
-.align-items-space-between{
-    align-items: space-between;
+.justify-content-space-between {
+  justify-content: space-between;
 }
-.flex-dir-col{
-    flex-direction: column;
+.text-deco-none {
+  text-decoration: none;
 }
-.justify-content-space-between{
-    justify-content: space-between;
-}
-.text-deco-none{
-    text-decoration: none;
-}
-
 /* ================================================================= */
-
-
-header{
-    min-height:80px;
-    width:100%;
-    padding:20px;
-    
-    background-color: red;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
+header {
+  min-height: 80px;
+  width: 100%;
+  padding: 20px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-header > div{
-    align-items: center;
+header > div {
+  align-items: center;
+}
+.login {
+  height: 80vh;
+}
+.login > div {
+  max-width: 500px;
+}
+.card {
+  width: "25rem";
 }
 
-
-
+.card button {
+  width: "100%";
+}
+marquee {
+  fontsize: "1.2rem";
+}
+.register {
+  height: "80vh";
+}
+.register > div {
+  maxwidth: "500px";
+}
+.card {
+  width: 25rem;
+}
