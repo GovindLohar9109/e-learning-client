@@ -3,7 +3,7 @@ import { CircularProgress } from "@mui/material";
 
 export default function MyCoursesCourses() {
   return  <>
-      {true ? (
+      {true ? ( // here when course will be get then it will be dynamic 
         <div className="w-100 ">
           <div style={{ height: "85vh", overflow: "auto" }}>
             <div className="m-2 my-4 mb-5 w-50 m-auto p-2 shadow ">
