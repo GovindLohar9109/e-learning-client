@@ -1,5 +1,6 @@
 import { useState } from "react";
 import registerValidation from "../../validation/registerValidation.js";
+import { userRegister } from "../../redux/actions/userActions.js";
 
 const userInitialData = {
   name: "",
@@ -14,6 +15,14 @@ export default function Register() {
   async function registerHandle(e) {
     e.preventDefault();
     const isValid = await registerValidation(user, setMessage);
+    if (isValid) {
+      const data = {
+        name: user.name,
+        email: user.email,
+        password: user.password,
+      };
+      userRegister(data, setMessage);
+    }
   }
 
   function registerInputHandle(e) {

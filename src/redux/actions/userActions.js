@@ -14,7 +14,19 @@ export async function userLogin(user, setMessage) {
       }
       return;
     }
-   } catch (err) {
+  } catch (err) {
+    const errorMsg = err.message;
+    setMessage({ status: true, msg: errorMsg });
+    removeMsg(setMessage);
+  }
+}
+export async function userRegister(user, setMessage) {
+  try {
+    const resp = await axios.post(url + "/register", user);
+    if (resp.data.status) {
+      window.location = "/login";
+    }
+  } catch (err) {
     const errorMsg = err.message;
     setMessage({ status: true, msg: errorMsg });
     removeMsg(setMessage);
@@ -23,7 +35,7 @@ export async function userLogin(user, setMessage) {
 
 export const getUsersCount = async (setUsersCount) => {
   try {
-    const result = await axios.get(url + `/users/count`);
+    const result = await axios.get(url + `admin/users/count`);
     setUsersCount(result.data.count);
   } catch (err) {
     setUsersCount(0);
