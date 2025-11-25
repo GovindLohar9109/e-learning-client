@@ -1,5 +1,6 @@
 import { useState } from "react";
 import loginValidation from "../../validation/loginValidation.js";
+import { userLogin } from "../../redux/actions/userActions.js";
 
 const userInitialData = {
   email: "",
@@ -12,13 +13,15 @@ export default function Login() {
   async function loginHandle(e) {
     e.preventDefault();
     const isValid = await loginValidation(user, setMessage);
+    if (isValid) {
+      userLogin(user, setMessage);
+    }
   }
   function loginInputHandle(e) {
     const name = e.target.name;
     const value = e.target.value;
     setUser({ ...user, [name]: value });
   }
-
   return (
     <div className="login d-flex align-items-center w-100">
       <div className="container p-4  shadow rounded ">
