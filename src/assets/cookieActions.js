@@ -7,8 +7,8 @@ export function removeToken() {
 export function getCookie(key) {
     const nameEQ = key + "=";
     const cookies = document.cookie.split(';');
-    for (let i = 0; i < cookies.length; i++) {
-        let cookie = cookies[i].trim();
+    for (const i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
         if (cookie.indexOf(nameEQ) === 0) {
             if (key == "user") return JSON.parse(cookie.substring(nameEQ.length));
             return cookie.substring(nameEQ.length);

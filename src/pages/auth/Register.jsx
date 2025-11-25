@@ -14,9 +14,9 @@ export default function Register() {
   const [message, setMessage] = useState({ status: false, msg: "" });
   async function registerHandle(e) {
     e.preventDefault();
-    let isValid = await registerValidation(user, setMessage);
+    const isValid = await registerValidation(user, setMessage);
     if (isValid) {
-      let data = {
+      const data = {
         name: user.name,
         email: user.email,
         password: user.password,
