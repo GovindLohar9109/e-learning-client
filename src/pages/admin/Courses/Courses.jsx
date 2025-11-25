@@ -1,5 +1,5 @@
 import { NavLink } from "react-router";
-import AdminCourseCard from "../../../components/cards/AdminCourseCard";
+import AdminCourseCard from "../../../components/cards/AdminCourse";
 
 export default function Courses() {
   return (

@@ -1,4 +1,4 @@
-import MyCourseCard from "../../components/cards/MyCourseCard";
+import MyCourseCard from "../../components/cards/MyCourse";
 import { CircularProgress } from "@mui/material";
 
 export default function MyCoursesCourses() {

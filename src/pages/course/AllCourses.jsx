@@ -1,5 +1,5 @@
 import Background from "../../components/common/Background";
-import CourseCard from "../../components/cards/CourseCard";
+import CourseCard from "../../components/cards/Course";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllCourses } from "../../redux/actions/courseAction";
 import { useState, useEffect } from "react";

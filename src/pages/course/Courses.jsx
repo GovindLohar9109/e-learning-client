@@ -1,5 +1,5 @@
 import { NavLink } from "react-router";
-import CourseCard from "../../components/cards/CourseCard";
+import CourseCard from "../../components/cards/Course";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { getCoursesByLimit } from "../../redux/actions/courseAction";
