@@ -3,25 +3,21 @@ import axios from "axios";
 import { url } from "../../assets/data";
 export async function userLogin(user, setMessage) {
   try {
-    const resp = await axios.post(url + "/login", user);
+    const response = await axios.post(url + "/login", user);
 
-    if (resp.data.status) {
-      if (resp.data.user.role_id == 0) {
-        // user
-        window.location = "/";
+    if (response.data?.status) {
+      const userRole = response.data.role;
+      if (userRole !== "Admin") {
+        window.location.href = "/";
       } else {
-        // admin user
-        window.location = "/admin";
+        window.location.href = "/admin";
       }
-    } else {
-      setMessage({ status: true, msg: resp.data.msg });
-      removeMsg(setMessage);
       return;
     }
-  } catch (err) {
-    setMessage({ status: true, msg: "Server Error", err });
+   } catch (err) {
+    const errorMsg = err.message;
+    setMessage({ status: true, msg: errorMsg });
     removeMsg(setMessage);
-    return;
   }
 }
 
