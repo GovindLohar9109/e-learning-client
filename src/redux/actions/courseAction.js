@@ -1,65 +1,66 @@
-import axios from "axios";
-import { url } from "../../assets/data";
-// FOR COURSES 
-export const addCourse = async (course, setMessage) => {
-    try {
-        var result = await axios.post(url + "/courses", course);
-        setMessage({ status: true, msg: result.data.msg });
-    }
-    catch (err) {
-        setMessage({ status: true, msg: "Server Error " });
-    }
-}
-export const deleteCourse = async (course_id) => {
-    try {
-        var result = await axios.delete(url + `/courses/${course_id}`);
-    }
-    catch (err) {
-    }
-}
-export const editCourse = async (course_id, course) => {
-    try {
-        var result = await axios.put(url + `/courses/${course_id}`, course);
-        if (result.data.status) {
-            window.location = "/admin/courses-manage"
-        }
-    }
-    catch (err) {
-    }
-}
-export const getAllCourses = () => async (disptach) => {
-    try {
-        var result = await axios.get(url + `/courses`);
-        disptach({ type: "GET_ALL_COURSES", payload: result.data })
-    }
-    catch (err) {
-        disptach({ type: "GET_ALL_COURSES", payload: [] })
-    }
-}
-export const getCourseDetailsById = (course_id) => async (disptach) => {
-    try {
-        var result = await axios.get(url + `/courses/${course_id}`);
-        disptach({ type: "GET_COURSE_DETAIL_BY_ID", payload: result.data })
-    }
-    catch (err) {
-        disptach({ type: "GET_COURSE_DETAIL_BY_ID", payload: {} })
-    }
-}
-export const getCoursesByLimit = (limit) => async (disptach) => {
-    try {
-        var result = await axios.get(url + `/courses/limit/${limit}`);
-        disptach({ type: "GET_COURSE_BY_LIMIT", payload: result.data })
-    }
-    catch (err) {
-        disptach({ type: "GET_COURSE_By_LIMIT", payload: [] })
-    }
-}
+import axios from "../../api/apiClient";
+
+// FOR COURSES
+export const addCourse = async (course) => {
+  try {
+    await axios.post("/admin/courses", course, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
+    window.location.href = "/admin/courses";
+  } catch (err) {
+    throw new Error("Add new course failed...");
+  }
+};
+
+export const deleteCourse = async (courseId) => {
+  try {
+    await axios.delete(`admin/courses/${courseId}`);
+    window.location.reload();
+  } catch (err) {
+    throw new Error("Delete course failed...");
+  }
+};
+
+export const editCourse = async (courseId, course, navigate) => {
+  try {
+    await axios.put(`admin/courses/${courseId}`, course);
+    window.location.href = "/admin/courses";
+  } catch (err) {
+    throw new Error("Edit course failed...");
+  }
+};
+
+export const getCourseDetailsById = async (courseId, setCourse) => {
+  try {
+    const result = await axios.get(`courses/courses/${courseId}`);
+    setCourse({ status: true, course: result.data });
+  } catch (err) {
+    setCourse({ status: true, course: {} });
+  }
+};
+
+export const getAllCourses = async (limit, search, setCourses) => {
+  const params = {
+    search: search || undefined,
+    limit: limit || 0,
+  };
+  try {
+    const result = await axios.get(`courses/courses/limit`, {
+      params,
+    });
+    setCourses({ status: true, courses: result.data });
+  } catch (err) {
+    setCourses({ status: false, courses: [] });
+  }
+};
+
 export const getCoursesCount = async (setCoursesCount) => {
-    try {
-        var result = await axios.get(url + `/courses/count`);
-        setCoursesCount(result.data.count);
-    }
-    catch (err) {
-        setCoursesCount(0)
-    }
-}
+  try {
+    const result = await axios.get("courses/courses/count");
+    setCoursesCount(result.data);
+  } catch (err) {
+    setCoursesCount(0);
+  }
+};
