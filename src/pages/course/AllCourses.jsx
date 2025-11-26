@@ -29,8 +29,8 @@ export default function AllCourses() {
               />
             </div>
             <div className="d-flex align-items-center justify-content-center flex-wrap mt-2 gap-4">
-              {data.courses.map((course, idx) => {
-                return <CourseCard key={idx} course={course} />;
+              {data.courses.map((course) => {
+                return <CourseCard key={course?.id} course={course} />;
               })}
             </div>
             <div></div>
