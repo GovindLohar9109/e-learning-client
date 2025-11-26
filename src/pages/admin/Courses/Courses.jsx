@@ -1,5 +1,5 @@
 import { NavLink } from "react-router";
-import AdminCourseCard from "../../../components/cards/AdminCourseCard";
+import AdminCourseCard from "../../../components/cards/AdminCourse";
 
 export default function Courses() {
   return (
@@ -27,8 +27,8 @@ export default function Courses() {
         </div>
         {true ? (
           <div className="d-flex align-items-center justify-content-center flex-wrap mt-2 gap-4">
-            {[1, 2, 3, 4].map((course, idx) => {
-              return <AdminCourseCard key={idx} course={course} />;
+            {[1, 2, 3, 4].map((course) => {
+              return <AdminCourseCard key={course?.id} course={course} />;
             })}
           </div>
         ) : null}

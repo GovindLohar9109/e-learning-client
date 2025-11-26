@@ -1,9 +1,8 @@
-import { removeMsg } from "../../assets/data";
-import axios from "axios";
-import { url } from "../../assets/data";
+import { removeMsg } from "../../utils/common";
+import axios from "../../api/apiClient";
 export async function userLogin(user, setMessage) {
   try {
-    const response = await axios.post(url + "/login", user);
+    const response = await axios.post("/auth/login", user);
 
     if (response.data?.status) {
       const userRole = response.data.role;
@@ -20,12 +19,20 @@ export async function userLogin(user, setMessage) {
     removeMsg(setMessage);
   }
 }
+
+export const getUser = () => async (dispatch) => {
+  try {
+    const response = await axios.get("/users");
+    dispatch({ type: "GET_USER", payload: response.data });
+  } catch (err) {
+    dispatch({ type: "GET_USER", payload: {} });
+  }
+};
+
 export async function userRegister(user, setMessage) {
   try {
-    const resp = await axios.post(url + "/register", user);
-    if (resp.data.status) {
-      window.location = "/login";
-    }
+    const response = await axios.post("auth/register", user);
+    if (response.data.status) window.location = "/";
   } catch (err) {
     const errorMsg = err.message;
     setMessage({ status: true, msg: errorMsg });
@@ -35,8 +42,8 @@ export async function userRegister(user, setMessage) {
 
 export const getUsersCount = async (setUsersCount) => {
   try {
-    const result = await axios.get(url + `admin/users/count`);
-    setUsersCount(result.data.count);
+    const result = await axios.get("admin/users/count");
+    setUsersCount(result.data);
   } catch (err) {
     setUsersCount(0);
   }

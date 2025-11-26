@@ -1,4 +1,4 @@
-import MyCourseCard from "../../components/cards/MyCourseCard";
+import MyCourseCard from "../../components/cards/MyCourse";
 import { CircularProgress } from "@mui/material";
 
 export default function MyCoursesCourses() {
@@ -16,8 +16,8 @@ export default function MyCoursesCourses() {
               />
             </div>
             <div className="d-flex align-items-center justify-content-center flex-wrap mt-2 gap-4">
-              {[1, 2, 3].map((course, idx) => {
-                return <MyCourseCard key={idx} course={course} />;
+              {[1, 2, 3].map((course) => {
+                return <MyCourseCard key={course?.id} course={course} />;
               })}
             </div>
             :
